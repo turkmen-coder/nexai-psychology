@@ -1,6 +1,15 @@
-import { eq } from "drizzle-orm";
+import { eq, desc } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { 
+  InsertUser, 
+  users, 
+  analyses, 
+  recommendations,
+  InsertAnalysis,
+  InsertRecommendation,
+  Analysis,
+  Recommendation
+} from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +98,78 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+/**
+ * Analiz kaydet
+ */
+export async function createAnalysis(analysis: InsertAnalysis): Promise<number> {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(analyses).values(analysis);
+  return Number(result[0].insertId);
+}
+
+/**
+ * Kullanıcının tüm analizlerini getir
+ */
+export async function getUserAnalyses(userId: number): Promise<Analysis[]> {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return db.select().from(analyses).where(eq(analyses.userId, userId)).orderBy(desc(analyses.createdAt));
+}
+
+/**
+ * Belirli bir analizi getir
+ */
+export async function getAnalysisById(analysisId: number): Promise<Analysis | undefined> {
+  const db = await getDb();
+  if (!db) {
+    return undefined;
+  }
+
+  const result = await db.select().from(analyses).where(eq(analyses.id, analysisId)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+/**
+ * Öneri kaydet
+ */
+export async function createRecommendation(recommendation: InsertRecommendation): Promise<number> {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(recommendations).values(recommendation);
+  return Number(result[0].insertId);
+}
+
+/**
+ * Analize ait önerileri getir
+ */
+export async function getRecommendationsByAnalysisId(analysisId: number): Promise<Recommendation[]> {
+  const db = await getDb();
+  if (!db) {
+    return [];
+  }
+
+  return db.select().from(recommendations).where(eq(recommendations.analysisId, analysisId));
+}
+
+/**
+ * Kullanıcının son analizini getir
+ */
+export async function getLatestUserAnalysis(userId: number): Promise<Analysis | undefined> {
+  const db = await getDb();
+  if (!db) {
+    return undefined;
+  }
+
+  const result = await db.select().from(analyses).where(eq(analyses.userId, userId)).orderBy(desc(analyses.createdAt)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
