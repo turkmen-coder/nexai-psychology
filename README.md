@@ -1,3 +1,4 @@
+<img width="2752" height="1536" alt="image" src="https://github.com/user-attachments/assets/7efd6d55-b4bd-43bc-aa4c-56b78518c864" />
 # 🧠 NexAI - AI-Powered Psychological Analysis Platform
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
