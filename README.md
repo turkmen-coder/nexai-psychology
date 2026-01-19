@@ -1,44 +1,44 @@
-# 🧠 NexAI - Yapay Zeka Destekli Psikolojik Analiz Platformu
+# 🧠 NexAI - AI-Powered Psychological Analysis Platform
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19.2-61dafb)](https://reactjs.org/)
 [![tRPC](https://img.shields.io/badge/tRPC-11.6-398ccb)](https://trpc.io/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-> **Yapay zeka destekli psikolojik analiz ve kişilik profilleme platformu** - Google Gemini ile yüz ifadesi analizi, risk toleransı ölçümü ve kültürel kalibrasyon sistemi.
+> **AI-powered psychological analysis and personality profiling platform** - Facial expression analysis, risk tolerance measurement, and cultural calibration system powered by Google Gemini.
 
-## 🌟 Özellikler
+## 🌟 Features
 
-### 🎭 Kişilik Analizi
-- **Big Five (OCEAN):** Dışadönüklük, Uyumluluk, Sorumluluk, Nevrotiklik, Deneyime Açıklık
-- **MBTI Profilleme:** 16 kişilik tipi analizi
-- **Jung Arketipleri:** Derin psikolojik profilleme
-- **Enneagram:** 9 temel kişilik tipi
+### 🎭 Personality Analysis
+- **Big Five (OCEAN)**: Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism
+- **MBTI Profiling**: 16 personality type analysis
+- **Jung Archetypes**: Deep psychological profiling
+- **Enneagram**: 9 core personality types
 
-### 🎯 Risk Toleransı Ölçümü
-- **BART (Balloon Analogue Risk Task):** Balon analojik risk görevi
-- **Gerçek zamanlı risk profili:** Karar verme davranışı analizi
-- **Kültürel kalibrasyon:** Batı, Doğu, Afrika çerçeveleri
+### 🎯 Risk Tolerance Measurement
+- **BART (Balloon Analogue Risk Task)**: Balloon analogue risk task
+- **Real-time risk profile**: Decision-making behavior analysis
+- **Cultural calibration**: Western, Eastern, African frameworks
 
-### 📸 Yüz İfadesi Analizi
-- **Google Gemini 3 entegrasyonu:** Görsel psikolojik analiz
-- **Duygu tanıma:** Yüz ifadelerinden duygu durumu tespiti
-- **Mikro ifade analizi:** Bilinçaltı tepkilerin değerlendirilmesi
+### 📸 Facial Expression Analysis
+- **Google Gemini 3 integration**: Visual psychological analysis
+- **Emotion recognition**: Emotion detection from facial expressions
+- **Micro-expression analysis**: Evaluation of subconscious reactions
 
-### 🌍 Çoklu Kültür Desteği
-- **Batı kültürü:** Bireysellik odaklı analiz
-- **Doğu kültürü:** Toplulukçu değerler perspektifi
-- **Afrika kültürü:** Ubuntu felsefesi çerçevesi
+### 🌍 Multi-Cultural Support
+- **Western culture**: Individualism-focused analysis
+- **Eastern culture**: Collectivist values perspective
+- **African culture**: Ubuntu philosophy framework
 
-### 🎨 Modern Arayüz
-- **Responsive tasarım:** Mobil ve masaüstü uyumlu
-- **Dark/Light mode:** Kullanıcı tercihi destekli tema
-- **Interaktif testler:** Kullanıcı dostu test deneyimi
-- **Gerçek zamanlı sonuçlar:** Anlık analiz ve geri bildirim
+### 🎨 Modern Interface
+- **Responsive design**: Mobile and desktop compatible
+- **Dark/Light mode**: User preference-based theme
+- **Interactive tests**: User-friendly test experience
+- **Real-time results**: Instant analysis and feedback
 
-## 🏗️ Teknoloji Stack
+## 🏗️ Technology Stack
 
-| Kategori | Teknoloji |
+| Category | Technology |
 |----------|-----------|
 | Frontend | React 19 + Tailwind CSS 4 + Wouter |
 | Backend | Express 4 + tRPC 11 |
@@ -47,43 +47,43 @@
 | Auth | Manus OAuth |
 | Build | Vite |
 
-## 🚀 Kurulum
+## 🚀 Installation
 
-### Gereksinimler
+### Requirements
 
 - Node.js 22+
 - pnpm 10+
-- MySQL 8+ (veya Manus yerleşik veritabanı)
-- Google Gemini API anahtarı
+- MySQL 8+ (or Manus built-in database)
+- Google Gemini API key
 
-### Adımlar
+### Steps
 
 ```bash
-# Depoyu klonla
+# Clone the repository
 git clone https://github.com/turkmen-coder/nexai.git
 cd nexai
 
-# Bağımlılıkları yükle
+# Install dependencies
 pnpm install
 
-# Ortam değişkenlerini ayarla
+# Set up environment variables
 cp .env.example .env
-# .env dosyasını düzenle
+# Edit .env file
 
-# Veritabanı şemasını oluştur
+# Create database schema
 pnpm db:push
 
-# Geliştirme sunucusunu başlat
+# Start development server
 pnpm dev
 ```
 
-### Ortam Değişkenleri
+### Environment Variables
 
 ```env
-# Veritabanı
+# Database
 DATABASE_URL=mysql://user:password@host:port/database
 
-# Kimlik Doğrulama (Manus OAuth)
+# Authentication (Manus OAuth)
 JWT_SECRET=your-secret
 OAUTH_SERVER_URL=https://api.manus.im
 VITE_OAUTH_PORTAL_URL=https://portal.manus.im
@@ -92,26 +92,26 @@ VITE_OAUTH_PORTAL_URL=https://portal.manus.im
 GEMINI_API_KEY=your-gemini-api-key
 ```
 
-## 📖 Kullanım
+## 📖 Usage
 
-### Kullanıcılar İçin
+### For End Users
 
-1. **Giriş Yap:** Manus OAuth ile kimlik doğrulama
-2. **Test Seç:** Big Five, MBTI, BART veya Yüz Analizi
-3. **Testi Tamamla:** Soruları yanıtla veya görsel yükle
-4. **Sonuçları İncele:** Detaylı psikolojik profil raporunu gör
-5. **Kültürel Bağlam:** Farklı kültürel perspektiflerle sonuçları değerlendir
+1. **Sign In**: Authenticate with Manus OAuth
+2. **Select Test**: Big Five, MBTI, BART, or Facial Analysis
+3. **Complete Test**: Answer questions or upload images
+4. **Review Results**: View detailed psychological profile report
+5. **Cultural Context**: Evaluate results from different cultural perspectives
 
-### Geliştiriciler İçin
+### For Developers
 
 ```typescript
-// Örnek: Kişilik analizi
+// Example: Personality analysis
 const { data: profile } = trpc.analysis.analyzePersonality.useQuery({
   responses: userResponses,
   culturalContext: "western"
 });
 
-// Örnek: Yüz ifadesi analizi
+// Example: Facial expression analysis
 const { mutate: analyzeImage } = trpc.gemini.analyzeFacialExpression.useMutation();
 
 analyzeImage({
@@ -120,100 +120,100 @@ analyzeImage({
 });
 ```
 
-## 🧪 Test
+## 🧪 Testing
 
 ```bash
-# Tüm testleri çalıştır
+# Run all tests
 pnpm test
 
-# Belirli bir test dosyasını çalıştır
+# Run specific test file
 pnpm test server/services/analysis.test.ts
 
-# İzleme modu
+# Watch mode
 pnpm test --watch
 ```
 
-## 📊 Proje Yapısı
+## 📊 Project Structure
 
 ```
 nexai/
-├── client/                 # Frontend React uygulaması
+├── client/                 # Frontend React application
 │   ├── src/
-│   │   ├── pages/         # Sayfa bileşenleri
-│   │   ├── components/    # Yeniden kullanılabilir UI bileşenleri
-│   │   ├── lib/           # tRPC istemcisi
-│   │   └── index.css      # Ana CSS
+│   │   ├── pages/         # Page components
+│   │   ├── components/    # Reusable UI components
+│   │   ├── lib/           # tRPC client
+│   │   └── index.css      # Main CSS
 ├── server/                # Backend Express + tRPC
-│   ├── services/          # İş mantığı
-│   │   ├── analysis.ts    # Psikolojik analiz
-│   │   ├── gemini.ts      # Google Gemini entegrasyonu
-│   │   └── cultural.ts    # Kültürel kalibrasyon
-│   ├── routers.ts         # tRPC API rotaları
-│   └── db.ts              # Veritabanı sorguları
-├── drizzle/               # Veritabanı şeması
+│   ├── services/          # Business logic
+│   │   ├── analysis.ts    # Psychological analysis
+│   │   ├── gemini.ts      # Google Gemini integration
+│   │   └── cultural.ts    # Cultural calibration
+│   ├── routers.ts         # tRPC API routes
+│   └── db.ts              # Database queries
+├── drizzle/               # Database schema
 │   └── schema.ts
-└── shared/                # Paylaşılan tipler ve sabitler
+└── shared/                # Shared types and constants
 ```
 
-## 🔒 Güvenlik ve Gizlilik
+## 🔒 Security and Privacy
 
-- **GDPR Uyumlu:** Kullanıcılar verilerinin sahibidir
-- **Şeffaf AI:** Tüm kararlar için açıklamalar
-- **Veri Minimizasyonu:** Sadece gerekli veriler toplanır
-- **Unutulma Hakkı:** Kullanıcılar tüm verilerini silebilir
-- **Anonimleştirme:** Hassas veriler anonimleştirilir
+- **GDPR Compliant**: Users own their data
+- **Transparent AI**: Explanations for all decisions
+- **Data Minimization**: Only collect what's necessary
+- **Right to Forget**: Users can delete all data
+- **Anonymization**: Sensitive data is anonymized
 
-## 🗺️ Yol Haritası
+## 🗺️ Roadmap
 
-### Faz 1: Temel (✅ Tamamlandı)
-- [x] Big Five kişilik analizi
-- [x] BART risk testi
-- [x] Google Gemini entegrasyonu
-- [x] Temel UI ve tema
+### Phase 1: Foundation (✅ Complete)
+- [x] Big Five personality analysis
+- [x] BART risk test
+- [x] Google Gemini integration
+- [x] Basic UI and theme
 
-### Faz 2: Gelişmiş Özellikler (🚧 Devam Ediyor)
-- [ ] MBTI ve Enneagram testleri
-- [ ] Gelişmiş yüz ifadesi analizi
-- [ ] Kültürel kalibrasyon sistemi
-- [ ] PDF rapor oluşturma
+### Phase 2: Advanced Features (🚧 In Progress)
+- [ ] MBTI and Enneagram tests
+- [ ] Advanced facial expression analysis
+- [ ] Cultural calibration system
+- [ ] PDF report generation
 
-### Faz 3: Genişleme (📅 Planlandı)
-- [ ] Grup analizi özellikleri
-- [ ] Longitudinal takip sistemi
-- [ ] Mobil uygulama (React Native)
-- [ ] API entegrasyonları
+### Phase 3: Expansion (📅 Planned)
+- [ ] Group analysis features
+- [ ] Longitudinal tracking system
+- [ ] Mobile app (React Native)
+- [ ] API integrations
 
-## 🤝 Katkıda Bulunma
+## 🤝 Contributing
 
-Katkılar memnuniyetle karşılanır! Lütfen önce [Katkı Rehberi](CONTRIBUTING.md)'ni okuyun.
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) first.
 
-### Geliştirme İş Akışı
+### Development Workflow
 
-1. Depoyu fork edin
-2. Özellik dalı oluşturun (`git checkout -b feature/harika-ozellik`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Harika özellik ekle'`)
-4. Dalınıza push edin (`git push origin feature/harika-ozellik`)
-5. Pull Request açın
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## 📄 Lisans
+## 📄 License
 
-Bu proje MIT Lisansı altında lisanslanmıştır - detaylar için [LICENSE](LICENSE) dosyasına bakın.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Teşekkürler
+## 🙏 Acknowledgments
 
-- **Manus Platform** - Altyapı ve OAuth
-- **Google Gemini** - AI analiz motoru
-- **Drizzle ORM** - Tip güvenli veritabanı sorguları
-- **tRPC** - Uçtan uca tip güvenli API'ler
-- **Tailwind CSS** - Utility-first stil sistemi
+- **Manus Platform** - Infrastructure and OAuth
+- **Google Gemini** - AI analysis engine
+- **Drizzle ORM** - Type-safe database queries
+- **tRPC** - End-to-end typesafe APIs
+- **Tailwind CSS** - Utility-first styling
 
-## 📞 Destek
+## 📞 Support
 
-- **Sorunlar:** [GitHub Issues](https://github.com/turkmen-coder/nexai/issues)
-- **E-posta:** support@nexai.app
+- **Issues**: [GitHub Issues](https://github.com/turkmen-coder/nexai/issues)
+- **Email**: support@nexai.app
 
 ---
 
-**❤️ ile Yapay Zeka ve Psikoloji tutkusuyla geliştirildi**
+**Built with ❤️ and passion for AI and Psychology**
 
-*"Kendini tanımak, yapay zekanın gücüyle buluşuyor."*
+*"Self-knowledge meets the power of artificial intelligence."*
